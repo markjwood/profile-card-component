@@ -1,0 +1,116 @@
+/* Reset */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Custom properties */
+:root {
+  --primary-400: hsl(185, 75%, 39%);
+  --primary-700: hsl(229, 23%, 23%);
+  --primary-600: hsl(227, 10%, 46%);
+  --neutral: hsl(0, 0%, 59%);
+
+  --text-smaller: .8em;
+  --text-smallest: .7em;
+
+  --gap: 1em;
+}
+
+/* Utility classes */
+.circle {
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.flex p {
+  margin: .25em;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.smaller {
+  font-size: var(--text-smaller);
+}
+
+.smallest {
+  font-size: var(--text-smallest);
+}
+
+/* General styling */
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.125rem;
+  background-color: var(--primary-400);
+  background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-attachment: fixed;
+  background-position: top -600px left -600px, bottom -600px right -600px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+li {
+  padding: var(--gap);
+  text-align: center;
+}
+
+/* Individual elements */
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  background-image: url(images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: initial;
+  width: 19em;
+  border: 2px solid var(--primary-400);
+  border-radius: 1em;
+}
+
+.card img {
+  margin: 85px 0 2em 0;
+}
+
+.social {
+  width: 100%;
+  border-top: 1px solid var(--neutral);
+  margin: 2em 0 0 0;
+}
